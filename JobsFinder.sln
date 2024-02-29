@@ -11,7 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobsFinder.Domain", "src\Jo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobsFinder.Infrastructure", "src\JobsFinder.Infrastructure\JobsFinder.Infrastructure.csproj", "{83ADFBE5-6F71-494B-9867-A27661463935}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Api", "src\Infrastructure.Api\Infrastructure.Api.csproj", "{4B878F96-D278-4219-83AB-F588FA75BD83}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{03E48E60-6E35-495B-8C06-A2AEE9829BDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobsFinder.Api", "src\JobsFinder.Api\JobsFinder.Api.csproj", "{DDA87E87-1F57-4F33-BEDB-F3208DEC045F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobsFinder.Communication", "src\Shared\JobsFinder.Communication\JobsFinder.Communication.csproj", "{CB102AAD-5D9A-4862-A1E5-D25D55AD8B25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobsFinder.Exceptions", "src\Shared\JobsFinder.Exceptions\JobsFinder.Exceptions.csproj", "{5622B546-B497-46EB-9E68-ED4CD39D4452}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,13 +37,30 @@ Global
 		{83ADFBE5-6F71-494B-9867-A27661463935}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83ADFBE5-6F71-494B-9867-A27661463935}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83ADFBE5-6F71-494B-9867-A27661463935}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4B878F96-D278-4219-83AB-F588FA75BD83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4B878F96-D278-4219-83AB-F588FA75BD83}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4B878F96-D278-4219-83AB-F588FA75BD83}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4B878F96-D278-4219-83AB-F588FA75BD83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDA87E87-1F57-4F33-BEDB-F3208DEC045F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA87E87-1F57-4F33-BEDB-F3208DEC045F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA87E87-1F57-4F33-BEDB-F3208DEC045F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA87E87-1F57-4F33-BEDB-F3208DEC045F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB102AAD-5D9A-4862-A1E5-D25D55AD8B25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB102AAD-5D9A-4862-A1E5-D25D55AD8B25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB102AAD-5D9A-4862-A1E5-D25D55AD8B25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB102AAD-5D9A-4862-A1E5-D25D55AD8B25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5622B546-B497-46EB-9E68-ED4CD39D4452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5622B546-B497-46EB-9E68-ED4CD39D4452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5622B546-B497-46EB-9E68-ED4CD39D4452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5622B546-B497-46EB-9E68-ED4CD39D4452}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{32F05134-1065-433E-9857-F0E8FC701F7A} = {096BB605-CF33-42D0-89A1-8CFC7095EA4A}
+		{8516C46A-FC54-4777-8A6E-F9D2D67187A2} = {096BB605-CF33-42D0-89A1-8CFC7095EA4A}
+		{83ADFBE5-6F71-494B-9867-A27661463935} = {096BB605-CF33-42D0-89A1-8CFC7095EA4A}
+		{03E48E60-6E35-495B-8C06-A2AEE9829BDB} = {096BB605-CF33-42D0-89A1-8CFC7095EA4A}
+		{DDA87E87-1F57-4F33-BEDB-F3208DEC045F} = {096BB605-CF33-42D0-89A1-8CFC7095EA4A}
+		{CB102AAD-5D9A-4862-A1E5-D25D55AD8B25} = {03E48E60-6E35-495B-8C06-A2AEE9829BDB}
+		{5622B546-B497-46EB-9E68-ED4CD39D4452} = {03E48E60-6E35-495B-8C06-A2AEE9829BDB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2C14EADD-08A0-4D48-B72F-DDE1F5BE4124}

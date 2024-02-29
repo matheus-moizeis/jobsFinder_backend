@@ -7,7 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JobsFinder.Application\JobsFinder.Application.csproj" />
+    <ProjectReference Include="..\Shared\JobsFinder.Communication\JobsFinder.Communication.csproj" />
+    <ProjectReference Include="..\Shared\JobsFinder.Exceptions\JobsFinder.Exceptions.csproj" />
   </ItemGroup>
 
 </Project>

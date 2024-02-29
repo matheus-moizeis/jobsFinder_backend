@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\JobsFinder.Domain\JobsFinder.Domain.csproj" />
+    <ProjectReference Include="..\Shared\JobsFinder.Communication\JobsFinder.Communication.csproj" />
+    <ProjectReference Include="..\Shared\JobsFinder.Exceptions\JobsFinder.Exceptions.csproj" />
+  </ItemGroup>
+
 </Project>
