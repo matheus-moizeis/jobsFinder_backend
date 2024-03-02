@@ -5,19 +5,19 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{096BB605-CF33-42D0-89A1-8CFC7095EA4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobsFinder.Application", "src\JobsFinder.Application\JobsFinder.Application.csproj", "{32F05134-1065-433E-9857-F0E8FC701F7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobsFinder.Application", "src\JobsFinder.Application\JobsFinder.Application.csproj", "{32F05134-1065-433E-9857-F0E8FC701F7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobsFinder.Domain", "src\JobsFinder.Domain\JobsFinder.Domain.csproj", "{8516C46A-FC54-4777-8A6E-F9D2D67187A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobsFinder.Domain", "src\JobsFinder.Domain\JobsFinder.Domain.csproj", "{8516C46A-FC54-4777-8A6E-F9D2D67187A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobsFinder.Infrastructure", "src\JobsFinder.Infrastructure\JobsFinder.Infrastructure.csproj", "{83ADFBE5-6F71-494B-9867-A27661463935}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobsFinder.Infrastructure", "src\JobsFinder.Infrastructure\JobsFinder.Infrastructure.csproj", "{83ADFBE5-6F71-494B-9867-A27661463935}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{03E48E60-6E35-495B-8C06-A2AEE9829BDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobsFinder.Api", "src\JobsFinder.Api\JobsFinder.Api.csproj", "{DDA87E87-1F57-4F33-BEDB-F3208DEC045F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobsFinder.Api", "src\JobsFinder.Api\JobsFinder.Api.csproj", "{DDA87E87-1F57-4F33-BEDB-F3208DEC045F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobsFinder.Communication", "src\Shared\JobsFinder.Communication\JobsFinder.Communication.csproj", "{CB102AAD-5D9A-4862-A1E5-D25D55AD8B25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobsFinder.Communication", "src\Shared\JobsFinder.Communication\JobsFinder.Communication.csproj", "{CB102AAD-5D9A-4862-A1E5-D25D55AD8B25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobsFinder.Exceptions", "src\Shared\JobsFinder.Exceptions\JobsFinder.Exceptions.csproj", "{5622B546-B497-46EB-9E68-ED4CD39D4452}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobsFinder.Exceptions", "src\Shared\JobsFinder.Exceptions\JobsFinder.Exceptions.csproj", "{5622B546-B497-46EB-9E68-ED4CD39D4452}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
