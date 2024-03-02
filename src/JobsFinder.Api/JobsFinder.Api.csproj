@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\JobsFinder.Application\JobsFinder.Application.csproj" />
+    <ProjectReference Include="..\JobsFinder.Infrastructure\JobsFinder.Infrastructure.csproj" />
     <ProjectReference Include="..\Shared\JobsFinder.Communication\JobsFinder.Communication.csproj" />
     <ProjectReference Include="..\Shared\JobsFinder.Exceptions\JobsFinder.Exceptions.csproj" />
   </ItemGroup>
