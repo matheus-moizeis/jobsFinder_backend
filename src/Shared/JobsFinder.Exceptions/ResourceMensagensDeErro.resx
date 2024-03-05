@@ -117,7 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Estado_Vazio" xml:space="preserve">
+    <value>Estado é obrigatório</value>
+  </data>
+  <data name="Ibge_Vazio" xml:space="preserve">
+    <value>Código IBGE é obrigatório</value>
+  </data>
   <data name="Nome_Cidade_EmBranco" xml:space="preserve">
     <value>O nome da cidade não deve ser em branco.</value>
+  </data>
+  <data name="Nome_Cidade_Vazia" xml:space="preserve">
+    <value>O nome da cidade não pode ser vazio.</value>
   </data>
 </root>
