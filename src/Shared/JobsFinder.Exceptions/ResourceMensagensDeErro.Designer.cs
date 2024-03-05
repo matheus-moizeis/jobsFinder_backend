@@ -61,6 +61,15 @@ namespace JobsFinder.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Erro desconhecido.
+        /// </summary>
+        public static string Erro_Desconhecido {
+            get {
+                return ResourceManager.GetString("Erro_Desconhecido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Estado é obrigatório.
         /// </summary>
         public static string Estado_Vazio {

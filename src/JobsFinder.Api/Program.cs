@@ -2,6 +2,7 @@ using JobsFinder.Domain.Extension;
 using JobsFinder.Infrastructure.Database;
 using JobsFinder.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using JobsFinder.Api.Filtros;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,8 @@ builder.Services.AddDbContext<JobsFinderContext>(
     );
 
 builder.Services.AddRepositorio(builder.Configuration);
+
+builder.Services.AddMvc(options => options.Filters.Add(typeof(FiltroDasExceptions)));
 
 var app = builder.Build();
 
