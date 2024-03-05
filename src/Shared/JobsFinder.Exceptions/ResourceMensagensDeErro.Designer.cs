@@ -61,11 +61,38 @@ namespace JobsFinder.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Estado é obrigatório.
+        /// </summary>
+        public static string Estado_Vazio {
+            get {
+                return ResourceManager.GetString("Estado_Vazio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Código IBGE é obrigatório.
+        /// </summary>
+        public static string Ibge_Vazio {
+            get {
+                return ResourceManager.GetString("Ibge_Vazio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O nome da cidade não deve ser em branco..
         /// </summary>
         public static string Nome_Cidade_EmBranco {
             get {
                 return ResourceManager.GetString("Nome_Cidade_EmBranco", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O nome da cidade não pode ser vazio..
+        /// </summary>
+        public static string Nome_Cidade_Vazia {
+            get {
+                return ResourceManager.GetString("Nome_Cidade_Vazia", resourceCulture);
             }
         }
     }
