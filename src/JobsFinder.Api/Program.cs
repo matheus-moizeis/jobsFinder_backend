@@ -3,6 +3,8 @@ using JobsFinder.Infrastructure.Database;
 using JobsFinder.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using JobsFinder.Api.Filtros;
+using JobsFinder.Application.Servicos.Automapper;
+using JobsFinder.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,8 +20,14 @@ builder.Services.AddDbContext<JobsFinderContext>(
     );
 
 builder.Services.AddRepositorio(builder.Configuration);
+builder.Services.AddApplication();
 
 builder.Services.AddMvc(options => options.Filters.Add(typeof(FiltroDasExceptions)));
+
+builder.Services.AddScoped(provider => new AutoMapper.MapperConfiguration(cfg =>
+{
+    cfg.AddProfile(new AutoMapperConfiguracao());
+}).CreateMapper());
 
 var app = builder.Build();
 
