@@ -79,6 +79,15 @@ namespace JobsFinder.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cidade já cadastrada com o código Ibge informado.
+        /// </summary>
+        public static string Ibge_Cadastrado {
+            get {
+                return ResourceManager.GetString("Ibge_Cadastrado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Código IBGE é obrigatório.
         /// </summary>
         public static string Ibge_Vazio {

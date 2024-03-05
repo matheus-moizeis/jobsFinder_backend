@@ -123,6 +123,9 @@
   <data name="Estado_Vazio" xml:space="preserve">
     <value>Estado é obrigatório</value>
   </data>
+  <data name="Ibge_Cadastrado" xml:space="preserve">
+    <value>Cidade já cadastrada com o código Ibge informado</value>
+  </data>
   <data name="Ibge_Vazio" xml:space="preserve">
     <value>Código IBGE é obrigatório</value>
   </data>

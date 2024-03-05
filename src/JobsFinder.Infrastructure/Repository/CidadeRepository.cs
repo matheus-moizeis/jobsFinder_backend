@@ -4,7 +4,8 @@ using JobsFinder.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 
 namespace JobsFinder.Infrastructure.Repository;
-public class CidadeRepository : ICidadeWriteOnlyRepository, ICidadeReadOnlyRepository
+public class CidadeRepository : ICidadeWriteOnlyRepository,
+    ICidadeReadOnlyRepository
 {
     private readonly JobsFinderContext _context;
 
@@ -18,10 +19,9 @@ public class CidadeRepository : ICidadeWriteOnlyRepository, ICidadeReadOnlyRepos
         await _context.Cidades.AddAsync(cidade);
     }
 
-    public async Task<bool> ExisteCidade(string nomeCidade)
+    public async Task<bool> ExisteCidadeIbge(int codIbge)
     {
         return await _context.Cidades.AnyAsync(
-            c => c.NomeCidade.Equals(nomeCidade)
-            );
+            c => c.CodIbge.Equals(codIbge));
     }
 }
