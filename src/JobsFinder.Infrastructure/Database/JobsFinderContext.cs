@@ -13,4 +13,5 @@ public class JobsFinderContext : DbContext
     }
 
     public DbSet<Cidade> Cidades { get; set; }
+    public DbSet<Estado> Estados { get; set; }
 }
