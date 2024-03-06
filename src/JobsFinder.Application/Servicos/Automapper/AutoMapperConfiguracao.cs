@@ -21,5 +21,6 @@ public class AutoMapperConfiguracao : Profile
     private void EntidadeParaResposta()
     {
         CreateMap<Cidade, ResCidadeRegistradaJson>();
+        CreateMap<Estado, ResponseEstado>();
     }
 }
