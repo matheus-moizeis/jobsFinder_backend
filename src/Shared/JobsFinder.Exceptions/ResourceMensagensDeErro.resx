@@ -123,6 +123,9 @@
   <data name="Erro_Desconhecido" xml:space="preserve">
     <value>Erro desconhecido</value>
   </data>
+  <data name="Estado_Nao_Encontrado" xml:space="preserve">
+    <value>Estado não encontrado.</value>
+  </data>
   <data name="Estado_Vazio" xml:space="preserve">
     <value>Estado é obrigatório</value>
   </data>
@@ -132,10 +135,16 @@
   <data name="Ibge_Vazio" xml:space="preserve">
     <value>Código IBGE é obrigatório</value>
   </data>
+  <data name="Id_Obrigatorio" xml:space="preserve">
+    <value>O Id é um campo obrigatório.</value>
+  </data>
   <data name="Nome_Cidade_EmBranco" xml:space="preserve">
     <value>O nome da cidade não deve ser em branco.</value>
   </data>
   <data name="Nome_Cidade_Vazia" xml:space="preserve">
     <value>O nome da cidade não pode ser vazio.</value>
+  </data>
+  <data name="Uf_Obrigatorio" xml:space="preserve">
+    <value>Uf é obrigatório.</value>
   </data>
 </root>

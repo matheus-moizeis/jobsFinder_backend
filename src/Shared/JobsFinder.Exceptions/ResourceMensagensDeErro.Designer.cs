@@ -79,6 +79,15 @@ namespace JobsFinder.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Estado não encontrado..
+        /// </summary>
+        public static string Estado_Nao_Encontrado {
+            get {
+                return ResourceManager.GetString("Estado_Nao_Encontrado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Estado é obrigatório.
         /// </summary>
         public static string Estado_Vazio {
@@ -106,6 +115,15 @@ namespace JobsFinder.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O Id é um campo obrigatório..
+        /// </summary>
+        public static string Id_Obrigatorio {
+            get {
+                return ResourceManager.GetString("Id_Obrigatorio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O nome da cidade não deve ser em branco..
         /// </summary>
         public static string Nome_Cidade_EmBranco {
@@ -120,6 +138,15 @@ namespace JobsFinder.Exceptions {
         public static string Nome_Cidade_Vazia {
             get {
                 return ResourceManager.GetString("Nome_Cidade_Vazia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uf é obrigatório..
+        /// </summary>
+        public static string Uf_Obrigatorio {
+            get {
+                return ResourceManager.GetString("Uf_Obrigatorio", resourceCulture);
             }
         }
     }
