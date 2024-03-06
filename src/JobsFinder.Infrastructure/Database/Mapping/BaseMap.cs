@@ -18,5 +18,6 @@ public class BaseMap<T> : IEntityTypeConfiguration<T> where T : EntityBase
 
         builder.HasKey(x => x.Id);
         builder.Property(x => x.Id).HasColumnName("Id").ValueGeneratedOnAdd();
+        builder.HasIndex(x => x.Id);
     }
 }

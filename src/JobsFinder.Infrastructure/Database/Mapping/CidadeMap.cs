@@ -13,5 +13,9 @@ public class CidadeMap : BaseMap<Cidade>
         base.Configure(builder);
 
         builder.Property(x => x.NomeCidade).HasMaxLength(50);
+        builder.Property(x => x.CodIbge).HasMaxLength(5);
+        builder.Property(x => x.EstadoId).IsRequired();
+        builder.HasOne(x => x.Estado).WithMany(x => x.Cidades)
+            .HasForeignKey(x => x.EstadoId);
     }
 }
