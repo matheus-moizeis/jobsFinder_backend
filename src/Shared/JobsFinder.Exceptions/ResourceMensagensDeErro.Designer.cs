@@ -61,6 +61,15 @@ namespace JobsFinder.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cidade não encontrada com o Id informado..
+        /// </summary>
+        public static string Cidade_Nao_Encontrada {
+            get {
+                return ResourceManager.GetString("Cidade_Nao_Encontrada", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Erro desconhecido.
         /// </summary>
         public static string Erro_Desconhecido {

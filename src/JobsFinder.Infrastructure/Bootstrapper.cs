@@ -21,7 +21,8 @@ public static class Bootstrapper
     private static void AddRepositorios(IServiceCollection services)
     {
         services.AddScoped<ICidadeWriteOnlyRepository, CidadeRepository>()
-                .AddScoped<ICidadeReadOnlyRepository, CidadeRepository>();
+                .AddScoped<ICidadeReadOnlyRepository, CidadeRepository>()
+                .AddScoped<ICidadeUpdateOnlyRepository, CidadeRepository>();
     }
 
     private static void AddContext(IServiceCollection services, IConfiguration configurationManager)

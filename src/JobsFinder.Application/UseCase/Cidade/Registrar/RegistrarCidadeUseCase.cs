@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using JobsFinder.Communication.Request;
+using JobsFinder.Communication.Response;
 using JobsFinder.Domain.Repository;
 using JobsFinder.Domain.Repository.InterfaceCidade;
 using JobsFinder.Exceptions;
@@ -24,12 +25,14 @@ public class RegistrarCidadeUseCase : IRegistrarCidadeUseCase
         _respositoryRead = respositoryRead;
     }
 
-    public async Task Executar(ReqResgitrarCidadeJson requisicao)
+    public async Task<ResCidadeRegistradaJson> Executar(ReqResgitrarCidadeJson requisicao)
     {
         await Validate(requisicao);
         var entidade = _mapper.Map<Domain.Entities.Cidade>(requisicao);
         await _repository.Adicionar(entidade);
         await _uow.Commit();
+
+        return _mapper.Map<ResCidadeRegistradaJson>(entidade);
     }
 
     private async Task Validate(ReqResgitrarCidadeJson requisicao)

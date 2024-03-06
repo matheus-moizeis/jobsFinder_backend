@@ -5,7 +5,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JobsFinder.Infrastructure.Repository;
 public class CidadeRepository : ICidadeWriteOnlyRepository,
-    ICidadeReadOnlyRepository
+    ICidadeReadOnlyRepository,
+    ICidadeUpdateOnlyRepository
 {
     private readonly JobsFinderContext _context;
 
@@ -23,5 +24,16 @@ public class CidadeRepository : ICidadeWriteOnlyRepository,
     {
         return await _context.Cidades.AnyAsync(
             c => c.CodIbge.Equals(codIbge));
+    }
+
+    public async Task<Cidade> RecuperarPorId(long cidadeId)
+    {
+        return await _context.Cidades.AsNoTracking()
+            .FirstOrDefaultAsync(c => c.Id == cidadeId);
+    }
+
+    public void Update(Cidade cidade)
+    {
+        _context.Update(cidade);
     }
 }
