@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using JobsFinder.Communication.Request;
 using JobsFinder.Communication.Response;
+using JobsFinder.Communication.Response.Estado;
 using JobsFinder.Domain.Entities;
 
 namespace JobsFinder.Application.Servicos.Automapper;

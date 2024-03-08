@@ -1,5 +1,5 @@
 ﻿using JobsFinder.Application.UseCase.Estado.Buscar;
-using JobsFinder.Communication.Response;
+using JobsFinder.Communication.Response.Estado;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JobsFinder.Api.Controllers;
@@ -29,5 +29,15 @@ public class EstadoController : ControllerBase
     {
         var estado = await useCase.BuscaIdEstadoUf(uf);
         return Ok(estado);
+    }
+
+    [HttpGet]
+    [ProducesResponseType(typeof(IEnumerable<ResponseEstado>),
+    StatusCodes.Status200OK)]
+    public async Task<IEnumerable<ResponseEstado>> Get(
+        [FromServices] IEstadoUseCase useCase)
+    {
+        var estados = await useCase.BuscarTodosEstados();
+        return estados;
     }
 }

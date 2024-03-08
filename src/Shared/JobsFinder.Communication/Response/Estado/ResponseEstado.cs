@@ -1,4 +1,4 @@
-﻿namespace JobsFinder.Communication.Response;
+﻿namespace JobsFinder.Communication.Response.Estado;
 public class ResponseEstado
 {
     public long Id { get; set; }

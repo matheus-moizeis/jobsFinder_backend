@@ -19,9 +19,13 @@ public class EstadoRepository : IEstadoRepository
 
     public async Task<Estado> BuscaIdEstadoUf(string Uf)
     {
-        return await _context.Estados.FirstOrDefaultAsync(
+        return await _context.Estados.AsNoTracking().FirstOrDefaultAsync(
             x => x.Uf == Uf.ToUpper()
             );
     }
 
+    async Task<IEnumerable<Estado>> IEstadoRepository.BuscarTodosEstados()
+    {
+        return await _context.Estados.AsNoTracking().ToListAsync();
+    }
 }

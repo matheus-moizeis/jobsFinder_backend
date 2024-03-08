@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using JobsFinder.Communication.Response;
 using JobsFinder.Domain.Repository.InterfaceEstado;
 using JobsFinder.Exceptions.ExceptionBase;
 using JobsFinder.Exceptions;
+using JobsFinder.Communication.Response.Estado;
 
 namespace JobsFinder.Application.UseCase.Estado.Buscar;
 public class EstadoUseCase : IEstadoUseCase
@@ -46,6 +46,13 @@ public class EstadoUseCase : IEstadoUseCase
         Validar(estado);
 
         return _mapper.Map<ResponseEstado>(estado);
+    }
+
+    public async Task<IEnumerable<ResponseEstado>> BuscarTodosEstados()
+    {
+        var estado = await _estadoRepository.BuscarTodosEstados();
+
+        return _mapper.Map<IEnumerable<ResponseEstado>>(estado);
     }
 
     public static void Validar(Domain.Entities.Estado estado)
