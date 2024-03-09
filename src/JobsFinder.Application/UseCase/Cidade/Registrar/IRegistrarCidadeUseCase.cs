@@ -1,5 +1,5 @@
-﻿using JobsFinder.Communication.Request;
-using JobsFinder.Communication.Response;
+﻿using JobsFinder.Communication.Request.Cidade;
+using JobsFinder.Communication.Response.Cidade;
 
 namespace JobsFinder.Application.UseCase.Cidade.Registrar;
 public interface IRegistrarCidadeUseCase

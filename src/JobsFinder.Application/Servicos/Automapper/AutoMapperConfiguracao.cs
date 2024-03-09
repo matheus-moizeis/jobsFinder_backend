@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using JobsFinder.Communication.Request;
-using JobsFinder.Communication.Response;
+using JobsFinder.Communication.Request.Cidade;
+using JobsFinder.Communication.Response.Cidade;
 using JobsFinder.Communication.Response.Estado;
 using JobsFinder.Domain.Entities;
 
@@ -22,6 +22,6 @@ public class AutoMapperConfiguracao : Profile
     private void EntidadeParaResposta()
     {
         CreateMap<Cidade, ResCidadeRegistradaJson>();
-        CreateMap<Estado, ResponseEstado>();
+        CreateMap<Estado, ResponseEstado>();        
     }
 }

@@ -1,8 +1,8 @@
 using JobsFinder.Application.UseCase.Cidade.Atualizar;
+using JobsFinder.Application.UseCase.Cidade.Listar;
 using JobsFinder.Application.UseCase.Cidade.Registrar;
-using JobsFinder.Communication.Request;
-using JobsFinder.Communication.Response;
-using Microsoft.AspNetCore.Http;
+using JobsFinder.Communication.Request.Cidade;
+using JobsFinder.Communication.Response.Cidade;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JobsFinder.Api.Controllers;
@@ -35,5 +35,30 @@ public class CidadeController : ControllerBase
         await useCase.Executar(id, requisicao);
 
         return NoContent();
+    }
+
+    [HttpGet]
+    [Route("{id:long}")]
+    [ProducesResponseType(typeof(ResCidadeRegistradaJson), StatusCodes.Status200OK)]
+    public async Task<IActionResult> BuscarPorId(
+        [FromServices] IListarCidadesUseCase useCase,
+        [FromRoute] long id
+        )
+    {
+        var cidade = await useCase.CidadeId(id);
+
+        if (cidade == null) return NotFound();
+
+        return Ok(cidade);
+    }
+
+    [HttpGet]
+    [ProducesResponseType(typeof(IEnumerable<ResCidadeRegistradaJson>), StatusCodes.Status200OK)]
+    public async Task<IActionResult> BuscarTodasAsCidades(
+        [FromServices] IListarCidadesUseCase useCase)
+    {
+        var cidades = await useCase.Cidades();
+
+        return Ok(cidades);
     }
 }

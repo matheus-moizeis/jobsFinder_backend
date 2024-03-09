@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using JobsFinder.Communication.Request;
+using JobsFinder.Communication.Request.Cidade;
 using JobsFinder.Domain.Repository;
 using JobsFinder.Domain.Repository.InterfaceCidade;
 using JobsFinder.Exceptions;

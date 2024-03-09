@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using JobsFinder.Communication.Request;
+using JobsFinder.Communication.Request.Cidade;
 using JobsFinder.Exceptions;
 
 namespace JobsFinder.Application.UseCase.Cidade.Registrar;

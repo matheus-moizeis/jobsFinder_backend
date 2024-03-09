@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using JobsFinder.Communication.Request;
+using JobsFinder.Communication.Request.Cidade;
 using JobsFinder.Exceptions;
 
 namespace JobsFinder.Application.UseCase.Cidade;
@@ -15,7 +15,7 @@ public class CidadeValidator : AbstractValidator<ReqResgitrarCidadeJson>
          .NotEmpty()
          .WithMessage(ResourceMensagensDeErro.Ibge_Vazio);
 
-        RuleFor(x => x.IdEstado)
+        RuleFor(x => x.EstadoId)
          .NotEmpty()
          .WithMessage(ResourceMensagensDeErro.Estado_Vazio);
     }

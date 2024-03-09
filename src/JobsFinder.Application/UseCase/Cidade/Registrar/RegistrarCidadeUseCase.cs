@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
-using JobsFinder.Communication.Request;
-using JobsFinder.Communication.Response;
+using JobsFinder.Communication.Request.Cidade;
+using JobsFinder.Communication.Response.Cidade;
 using JobsFinder.Domain.Repository;
 using JobsFinder.Domain.Repository.InterfaceCidade;
+using JobsFinder.Domain.Repository.InterfaceEstado;
 using JobsFinder.Exceptions;
 using JobsFinder.Exceptions.ExceptionBase;
 
@@ -11,18 +12,21 @@ public class RegistrarCidadeUseCase : IRegistrarCidadeUseCase
 {
     private readonly ICidadeReadOnlyRepository _respositoryRead;
     private readonly ICidadeWriteOnlyRepository _repository;
+    private readonly IEstadoRepository _estadoRepository;
     private readonly IMapper _mapper;
     private readonly IUnitOfWork _uow;
 
     public RegistrarCidadeUseCase(ICidadeWriteOnlyRepository repository,
         IMapper mapper,
         IUnitOfWork uow,
-        ICidadeReadOnlyRepository respositoryRead)
+        ICidadeReadOnlyRepository respositoryRead,
+        IEstadoRepository estadoRepository)
     {
         _repository = repository;
         _mapper = mapper;
         _uow = uow;
         _respositoryRead = respositoryRead;
+        _estadoRepository = estadoRepository;
     }
 
     public async Task<ResCidadeRegistradaJson> Executar(ReqResgitrarCidadeJson requisicao)

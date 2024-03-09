@@ -1,4 +1,5 @@
 ﻿using JobsFinder.Application.UseCase.Cidade.Atualizar;
+using JobsFinder.Application.UseCase.Cidade.Listar;
 using JobsFinder.Application.UseCase.Cidade.Registrar;
 using JobsFinder.Application.UseCase.Estado.Buscar;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,5 +12,6 @@ public static class Bootstrapper
         services.AddScoped<IRegistrarCidadeUseCase, RegistrarCidadeUseCase>();
         services.AddScoped<IAtualizarCidadeUseCase, AtualizarCidadeUseCase>();
         services.AddScoped<IEstadoUseCase, EstadoUseCase>();
+        services.AddScoped<IListarCidadesUseCase, ListarCidadesUseCase>();
     }
 }

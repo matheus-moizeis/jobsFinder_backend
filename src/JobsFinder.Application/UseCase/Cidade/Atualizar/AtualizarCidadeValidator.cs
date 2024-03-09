@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using JobsFinder.Communication.Request;
+using JobsFinder.Communication.Request.Cidade;
 
 namespace JobsFinder.Application.UseCase.Cidade.Atualizar;
 public class AtualizarCidadeValidator : AbstractValidator<ReqResgitrarCidadeJson>

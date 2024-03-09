@@ -1,4 +1,4 @@
-﻿using JobsFinder.Communication.Request;
+﻿using JobsFinder.Communication.Request.Cidade;
 
 namespace JobsFinder.Application.UseCase.Cidade.Atualizar;
 public interface IAtualizarCidadeUseCase
