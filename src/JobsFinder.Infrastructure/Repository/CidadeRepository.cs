@@ -62,4 +62,11 @@ public class CidadeRepository : ICidadeWriteOnlyRepository,
     {
         _context.Update(cidade);
     }
+
+    public async Task Deletar(long id)
+    {
+        var cidade = await _context.Cidades.FirstOrDefaultAsync(x => x.Id == id);
+
+        _context.Cidades.Remove(cidade);
+    }
 }

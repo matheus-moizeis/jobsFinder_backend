@@ -1,4 +1,5 @@
 using JobsFinder.Application.UseCase.Cidade.Atualizar;
+using JobsFinder.Application.UseCase.Cidade.Deletar;
 using JobsFinder.Application.UseCase.Cidade.Listar;
 using JobsFinder.Application.UseCase.Cidade.Registrar;
 using JobsFinder.Communication.Request.Cidade;
@@ -60,5 +61,17 @@ public class CidadeController : ControllerBase
         var cidades = await useCase.Cidades();
 
         return Ok(cidades);
+    }
+
+    [HttpDelete]
+    [Route("{id:long}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    public async Task<IActionResult> Deletar(
+        [FromServices] IDeletarCidadeUseCase useCase,
+        [FromRoute] long id)
+    {
+        await useCase.Executar(id);
+
+        return NoContent();
     }
 }
