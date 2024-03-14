@@ -27,5 +27,8 @@ public class PerfilMap : BaseMap<Perfil>
         builder.Property(x => x.Logradouro).HasMaxLength(100);
         builder.Property(x => x.Complemento).HasMaxLength(100);
         builder.Property(x => x.Bairro).HasMaxLength(50);
+        builder.Property(x => x.CarteiraMotorista).HasMaxLength(50);
+        builder.HasOne(x => x.Cidade).WithMany(x => x.Perfis)
+            .HasForeignKey(x => x.IdCidade);
     }
 }
