@@ -24,4 +24,7 @@ public class Perfil : EntityBase
     public string CarteiraMotorista { get; set; }
     public CategoriaCarteiraMotorista CategoriaCarteiraMotorista { get; set; }
 
+    public long IdCidade { get; set; }
+    public Cidade Cidade { get; set; }
+
 }
