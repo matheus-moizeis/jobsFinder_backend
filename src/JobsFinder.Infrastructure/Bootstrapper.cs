@@ -2,6 +2,7 @@
 using JobsFinder.Domain.Repository;
 using JobsFinder.Domain.Repository.InterfaceCidade;
 using JobsFinder.Domain.Repository.InterfaceEstado;
+using JobsFinder.Domain.Repository.InterfacePerfil;
 using JobsFinder.Infrastructure.Database;
 using JobsFinder.Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +27,10 @@ public static class Bootstrapper
                 .AddScoped<ICidadeUpdateOnlyRepository, CidadeRepository>();
 
         services.AddScoped<IEstadoRepository, EstadoRepository>();
+
+        services.AddScoped<IPerfilReadOnlyRepository, PerfilRepository>()
+                .AddScoped<IPerfilUpdateOnlyRepository,  PerfilRepository>()
+                .AddScoped<IPerfilWriteOnlyRepository, PerfilRepository>();
     }
 
     private static void AddContext(IServiceCollection services, IConfiguration configurationManager)
